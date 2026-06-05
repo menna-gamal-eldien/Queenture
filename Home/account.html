@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenture</title>
+
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/account.css">
+    <link rel="icon" href="../Web_logo_bright.png">
+</head>
+
+<body>
+    <div class="Bigcontainer">
+        <div class="body R C">
+            <div class="container">
+                <div class="location"></div>
+                <div class="content">
+                    <div class="sidenav R Col">
+                        <div>Manage my profile</div>
+                        <span class="active" data-for="profile">My profile</span>
+                        <span data-for="address">Address book</span>
+                        <div>My orders</div>
+                        <span data-for="order">My Orders</span>
+                        <span data-for="recieved">Orders Recieved</span>
+                        <span data-for="return">My returns</span>
+                        <span data-for="cancel">My cancellation</span>
+                        <div data-for="wishlist"><a href="./wishlist.html" class="remove">My Wishlist</a></div>
+                        <div data-for="logout">Log out</div>
+                    </div>
+
+                    <form class="Col active" data-form="profile">
+                        <div class="title">Edit Your Profile</div>
+                        <div class="smallinput R">
+                            <div class="R Col">
+                                <label for="first_name">First Name</label>
+                                <div class="input R Col">
+                                    <input class="grey" id="first_name" type="text" placeholder="####"
+                                        name="first_name">
+                                    <span class="err">Must Only Contain Letters</span>
+                                </div>
+                            </div>
+                            <div class=" R Col">
+                                <label for="last_name">Last Name</label>
+                                <div class="input R Col">
+                                    <input class="grey" id="last_name" type="text" placeholder="####" name="last_name">
+                                    <span class="err">Must Only Contain Letters</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="smallinput R">
+                            <div class="R Col">
+                                <label for="email">Email</label>
+                                <div class="input R Col">
+                                    <input class="grey" id="email" type="text" placeholder="####@gmail.com"
+                                        name="email">
+                                    <span class="err">Email Is Invalid</span>
+                                </div>
+                            </div>
+                            <div class="R Col">
+                                <label for="phone">Phone</label>
+                                <div class="input R Col">
+                                    <input class="grey" id="location" type="text" placeholder="0000 000 0000"
+                                        name="phone">
+                                    <span class="err">Phone Is Invalid</span>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="password">Password Changes</label>
+                        <div class="input R Col">
+                            <input class="grey" id="password" type="text" placeholder="Current Password"
+                                name="password">
+                            <span class="err">Password Is Wrong</span>
+                        </div>
+                        <div class="input R Col">
+                            <input class="grey" type="text" placeholder="New Password" name="new_password">
+                            <span class="err">
+                                Must Contain Uppercase, Lowercase, Number, Symbol and More That 8 Characters
+                            </span>
+                        </div>
+                        <div class="input R Col">
+                            <input class="grey" type="text" placeholder="Confirm New Password" name="confirm_password">
+                            <span class="err">Rewrite The New Password Here</span>
+                        </div>
+
+                        <div class="buttons R C">
+                            <button>Cancel</button>
+                            <input type="submit" value="Save Changes">
+                        </div>
+                    </form>
+
+                    <form class="Col" data-form="address">
+                        <div class="top R">
+                            <div class="title">Edit Your Address</div>
+                            <button>Add New</button>
+                        </div>
+                        <div class="addressholder holder"></div>
+                    </form>
+
+                    <form class="Col" data-form="order">
+                        <div class="title">View Your Orders</div>
+                        <div class="orderholder holder"></div>
+                    </form>
+
+                    <form class="Col" data-form="recieved">
+                        <div class="title">View Your Recieved Orders</div>
+                        <div class="recieveholder holder"></div>
+                    </form>
+
+                    <form class="Col" data-form="return">
+                        <div class="title">View Your Returns</div>
+                        <div class="returnholder holder"></div>
+                    </form>
+
+                    <form class="Col" data-form="cancel">
+                        <div class="title">View Your Cancellation</div>
+                        <div class="cancelholder holder"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##################################### Window -->
+    <div class="confirmdelete overflow" data-type="" data-id="">
+        <div class="windowdata R Col C">
+            <div class="title">Confirm Deletion</div>
+            <span>This is permenant</span>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+                <button>Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="logoutwindow overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Confirm Log Out</div>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+                <button>Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="addaddress overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Add New Address</div>
+            <div class="body R Col">
+                <input class="border" type="text" placeholder="label" name="label">
+                <input class="border" type="text" placeholder="address" name="address">
+                <input class="border" type="text" placeholder="zip" name="zip" maxlength="5">
+                <textarea class="border" placeholder="Any any specific details to the location"
+                    name="detail"></textarea>
+                <span class="err">All Fields Must Be Provided</span>
+            </div>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+                <button>Add Address</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##################################### SVG -->
+    <svg viewBox="0 0 384 512" class="delsvg hide">
+        <path
+            d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" />
+    </svg>
+
+    <svg viewBox="0 0 128 128" stroke="black" class="expand expandsvg hide">
+        <line style="stroke-width:12;stroke-linecap:square" x1="111" x2="64" y1="40.5" y2="87.499"></line>
+        <line style="stroke-width:12;stroke-linecap:square" x1="64" x2="17" y1="87.499" y2="40.5"></line>
+    </svg>
+
+    <script src="../Script/JS/StateAuch.js"></script>
+    <script src="../Script/JS/DB.js"></script>
+    <script src="../Script/JS/layout.js"></script>
+    <script src="../Script/JS/account.js"></script>
+</body>
+
+</html>
