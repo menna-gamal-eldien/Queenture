@@ -1,0 +1,318 @@
+.content {
+    gap: 100px;
+}
+
+.mainitem {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    width: 100%;
+    gap: 30px;
+    height: max-content;
+}
+
+.images {
+    display: grid;
+    grid-template: repeat(4, 117.5px) / 150px 1fr;
+    height: 500px;
+    gap: 10px;
+}
+
+.images * {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--Grey);
+}
+
+.images *:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.images *:nth-of-type(1) {
+    grid-area: 1/2/5;
+}
+
+.images *.all {
+    grid-area: 1/1/5/3;
+}
+
+.iteminfo {
+    gap: 10px;
+    height: 500px;
+    display: grid;
+    grid-template: 34px 28px 34px 1fr 30px 50px 50px 50px / 1fr;
+}
+
+.iteminfo.special {
+    height: max-content;
+    grid-template: 34px 28px 34px 1fr 30px 50px max-content / 1fr;
+}
+
+.rate {
+    justify-content: start;
+    gap: 20px;
+}
+
+.stars {
+    width: 152px;
+    gap: 4px;
+}
+
+.stars svg {
+    fill: var(--Good-gray);
+    filter: brightness(0.8);
+}
+
+.stars svg.active {
+    fill: var(--Red);
+    filter: brightness(1);
+}
+
+.review {
+    color: var(--Grey);
+    opacity: 0.3;
+    font-weight: bold;
+}
+
+.sep {
+    width: 2px;
+    height: 100%;
+    background-color: var(--Grey);
+    opacity: 0.5;
+}
+
+.stock {
+    color: var(--Gold);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.stock.no {
+    color: var(--Red);
+}
+
+.price {
+    justify-content: start;
+    gap: 50px;
+}
+
+.price span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--Main_Color);
+}
+
+.price span.discount {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.price span:last-of-type {
+    display: none;
+}
+
+.price span:last-of-type.active {
+    display: block;
+}
+
+.detail {
+    font-size: 1.1rem;
+    color: var(--Grey);
+    opacity: 0.7;
+    padding-bottom: 20px;
+    border-bottom: var(--Grey) 2px solid;
+}
+
+.colors {
+    justify-content: start;
+    gap: 50px;
+}
+
+.colors span {
+    font-size: 1.4rem;
+    color: var(--Main_Color);
+    font-weight: bold;
+}
+
+.colors>div {
+    gap: 10px;
+}
+
+.colors div div {
+    width: 25px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.colors div .active,
+.colors div div:hover {
+    border: 3px solid black;
+    transform: scale(1.2);
+}
+
+.itemdata {
+    color: var(--Grey);
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
+
+.amount {
+    justify-content: space-between;
+    height: 100%;
+}
+
+.amount div {
+    border: 1px solid black;
+    border-radius: 7px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.amount .min,
+.amount .max {
+    height: 100%;
+    aspect-ratio: 1/1;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.amount .min:hover,
+.amount .max:hover {
+    filter: brightness(0.8);
+}
+
+.amount .max {
+    background-color: var(--Red);
+    color: var(--White);
+    border-left: 1px solid black;
+}
+
+.amount .min {
+    border-right: 1px solid black;
+    background-color: var(--White);
+    color: var(--Main_Color);
+    padding-bottom: 21px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.amount .val {
+    width: 90px;
+    font-size: 1.5rem;
+    color: var(--Main_Color);
+}
+
+.amount .heart {
+    padding: 15px 10px;
+    border-radius: 10px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.amount button {
+    width: 240px;
+}
+
+.amount button.disabled {
+    cursor: not-allowed;
+    filter: brightness(0.6);
+}
+
+.amount .heart svg {
+    height: 25px;
+    fill: black;
+    transition: 0.3s;
+}
+
+.amount .heart {
+    padding-top: 12px;
+}
+
+.amount .heart.active svg,
+.amount .heart:hover svg {
+    fill: var(--Red);
+}
+
+.return {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100%;
+    justify-content: start;
+    gap: 37px;
+    padding-left: 34px;
+}
+
+.return svg {
+    height: 30px;
+}
+
+.return .title {
+    font-size: 1.2rem;
+}
+
+.return span {
+    color: var(--Grey);
+    opacity: 0.5;
+    font-size: 0.8rem;
+}
+
+.rate .new,
+.rate .discount {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--White);
+    padding: 3px 14px;
+    border-radius: 5px;
+    display: none;
+}
+
+.rate .new {
+    background-color: var(--Green);
+}
+
+.rate .discount {
+    border-radius: 5px;
+    background-color: var(--Red);
+}
+
+.rate .new.active,
+.rate .discount.active {
+    display: block;
+}
+
+/* Ad */
+
+.data div {
+    font-weight: bold;
+    color: var(--Main_Color);
+    margin-bottom: 10px;
+}
+
+.data span {
+    color: black;
+    opacity: 0.5;
+}
+
+.data .cats {
+    margin-top: 10px;
+    gap: 5px;
+    flex-wrap: wrap;
+
+}
+
+.data .cats div {
+    padding: 11px;
+    color: white;
+    background-color: var(--Main_Color);
+    border-radius: 10px;
+    font-weight: 100;
+}

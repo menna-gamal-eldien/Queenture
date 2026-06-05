@@ -1,0 +1,232 @@
+.content {
+    gap: 100px;
+}
+
+.navs {
+    justify-content: space-between;
+}
+
+.navigation {
+    gap: 20px;
+}
+
+.navigation div {
+    gap: 15px;
+    cursor: pointer;
+    justify-content: start;
+    transition: 0.3s;
+}
+
+.navigation div:hover {
+    filter: brightness(0.8);
+    transform: scale(1.1);
+}
+
+.navigation div svg {
+    height: 20px;
+}
+
+.navigation span {
+    font-size: 1.3rem;
+    color: var(--Main_Color);
+}
+
+.navs .image {
+    width: 900px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template: 350px / repeat(5, 900px);
+}
+
+.navs .image div:not(.control) {
+    transition: 0.4s;
+}
+
+.navs .image .control {
+    height: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    gap: 10px;
+}
+
+.image .control span {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--White);
+    border-radius: 50%;
+    border: 3px solid var(--White);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.image .control span.active {
+    background-color: var(--Main_Color);
+    transform: scale(1.3);
+}
+
+.sub {
+    gap: 10px;
+}
+
+.sub>span {
+    font-size: 1.2rem;
+    color: var(--Gold);
+}
+
+.sub .control {
+    justify-content: space-between;
+}
+
+.sub .title {
+    font-size: 1.7rem;
+}
+
+.sub .control .arrows {
+    gap: 20px;
+    user-select: none;
+}
+
+.sub .control .arrows span {
+    padding: 10px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: var(--Main_Color);
+    color: var(--White);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cards {
+    display: grid;
+    grid-template: 120px / repeat(13, 120px);
+    gap: 8px;
+    width: 1280px;
+    overflow: hidden;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+.category .card {
+    border: 2px solid var(--Main_Color);
+    width: 110px;
+    height: 110px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category .card:hover {
+    transform: scale(1.1);
+}
+
+.category .card svg {
+    width: 100%;
+    height: 100%;
+}
+
+.flashsales .cards,
+.bestselling .cards,
+.random .cards {
+    grid-template: 390px / repeat(16, 280px);
+    gap: 50px;
+}
+
+.random .cards {
+    grid-template-rows: repeat(2, 390px);
+}
+
+.imgsep {
+    width: 100%;
+    height: 400px;
+    background-color: var(--Grey);
+    border-radius: 10px;
+}
+
+.random button {
+    margin-top: 20px;
+    align-self: center;
+}
+
+.newarrival .cards {
+    grid-template: repeat(2, 280px) / repeat(4, 280px);
+    gap: 30px;
+}
+
+.newarrival .card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.newarrival .card:nth-of-type(1) {
+    grid-area: 1/1/3/3;
+}
+
+.newarrival .card:nth-of-type(2) {
+    grid-area: 1/3/2/5;
+}
+
+.newarrival .card .infodiv {
+    text-overflow: ellipsis;
+    height: 50px;
+}
+
+.property {
+    justify-content: space-between;
+}
+
+.prop {
+    width: 300px;
+    text-align: center;
+    gap: 30px;
+}
+
+.prop .svg {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    background-color: var(--Main_Color);
+    padding: 15px;
+}
+
+.property svg {
+    width: 99%;
+    height: 100%;
+    fill: white;
+}
+
+.prop:nth-of-type(1) svg {
+    width: 55px;
+    height: 55px;
+}
+
+.prop span:nth-of-type(1) {
+    font-size: 1.4rem;
+    color: var(--Main_Color);
+    font-weight: bold;
+}
+
+.prop span:nth-of-type(2) {
+    font-size: 1.2rem;
+    color: var(--Main_Color);
+}
+
+@media screen and (max-width:1900px) {
+    .cards {
+        width: 1125px;
+    }
+
+    .newarrival .cards {
+        grid-template: repeat(2, 250px) / repeat(4, 266px);
+        gap: 20px;
+    }
+}

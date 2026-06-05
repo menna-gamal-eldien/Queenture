@@ -1,0 +1,14 @@
+.content {
+    gap: 20px;
+}
+
+.vericode {
+    padding: 10px;
+    border-radius: 20px;
+    background: var(--Main_Color);
+    font-size: 1.2rem;
+    display: grid;
+    place-content: center;
+    color: var(--White);
+    letter-spacing: 0.2rem;
+}
