@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenture</title>
+
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/newitem.css">
+    <link rel="icon" href="../Web_logo_bright.png">
+
+</head>
+
+<body>
+    <div class="Bigcontainer">
+        <div class="body R C">
+            <div class="container">
+                <div class="location"></div>
+                <div class="content R Col">
+                    <div class="field">
+                        <div class="R">
+                            <span>Name:</span>
+                            <input class="border" type="text" name="name" placeholder="example: The Pretty Sofa">
+                        </div>
+                        <div class="R">
+                            <span>Detail:</span>
+                            <textarea class="border" type="text" name="detail"
+                                placeholder="example: It is really nice Buy it"></textarea>
+                        </div>
+
+                        <div class="R">
+                            <span>Price:</span>
+                            <input class="border" type="text" name="price" maxlength="7" placeholder="example: 00">
+                        </div>
+                        <div class="R">
+                            <span>Width:</span>
+                            <input class="border" type="text" name="w" maxlength="7" placeholder="example: 00">
+                        </div>
+                        <div class="R">
+                            <span>Height:</span>
+                            <input class="border" type="text" name="h" maxlength="7" placeholder="example: 00">
+                        </div>
+                        <div class="R">
+                            <span>Depth:</span>
+                            <input class="border" type="text" name="d" maxlength="7" placeholder="example: 00">
+                        </div>
+                        <div class="R">
+                            <span>Weight:</span>
+                            <input class="border" type="text" name="weight" maxlength="7" placeholder="example: 00">
+                        </div>
+                        <div class="R space">
+                            <span>Discount:</span>
+                            <input class="border" type="text" name="discount_v" maxlength="3" placeholder="example: 00">
+                        </div>
+
+                        <div class="R">
+                            <span>Instock:</span>
+                            <input class="border" type="checkbox" name="instock" checked>
+                        </div>
+
+                        <div class="R">
+                            <span>Is New:</span>
+                            <input class="border" type="checkbox" name="new" checked>
+                        </div>
+
+                        <div class="R">
+                            <span>Colors:</span>
+                            <div class="subs R sp">
+                                <div class="add col">+</div>
+                            </div>
+                        </div>
+                        <div class="R space">
+                            <span>Category:</span>
+                            <div class="subs R">
+                                <div class="add cat">+</div>
+                            </div>
+                        </div>
+                        <div class="R">
+                            <span>Sub_Cat:</span>
+                            <div class="subs R">
+                                <div class="add scat">+</div>
+                            </div>
+                        </div>
+
+                        <div class="R">
+                            <span>Material:</span>
+                            <input class="border" type="text" name="material" placeholder="example: wood">
+                        </div>
+
+                        <div class="R">
+                            <span>Images:</span>
+                            <input class="border" type="file" multiple accept="image/*">
+                        </div>
+
+                        <div class="R images"></div>
+                    </div>
+                    <div class="buttons">
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Windows -->
+    <div class="colorselect overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Select The Color</div>
+            <input type="color">
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+                <button>Select</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="catselect overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Select The Category</div>
+            <div class="subcats R">
+                <div>The Data Is Not Set Yet Wait A Sec</div>
+            </div>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="subcatselect overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Select The Sub Category</div>
+            <div class="subcats R">
+                <div>The Data Is Not Set Yet Wait A Sec</div>
+            </div>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/JS/StateAuch.js"></script>
+    <script src="../Script/JS/DB.js"></script>
+    <script src="../Script/JS/layoutA.js"></script>
+    <script src="../Script/JS/newitem.js"></script>
+</body>
+
+</html>

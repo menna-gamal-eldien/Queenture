@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenture</title>
+
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/store.css">
+    <link rel="icon" href="../Web_logo_bright.png">
+
+</head>
+
+<body>
+    <div class="Bigcontainer">
+        <div class="body R C">
+            <div class="container">
+                <div class="location"></div>
+                <div class="numitem">Coupons Found (<span>5</span>)</div>
+                <div class="buttons"><button class="addnew">Add Coupon</div>
+                <div class="content">
+                    <div class="filter R Col">
+                        <div class="title">Filter Coupons</div>
+                        <div class="R buttons">
+                            <button>Apply Filter</button>
+                            <button>Clear Filter</button>
+                        </div>
+
+                        <div class="part R Col" data-for="name">
+                            <div class="title">Name</div>
+                            <input type="text" placeholder="Name Of Coupon" name="name">
+                        </div>
+
+                        <div class="part R Col" data-for="value">
+                            <div class="title">Value</div>
+                            <input type="text" placeholder="Value Of Coupon" name="value">
+                        </div>
+
+                        <div class="part R Col" data-for="discount">
+                            <div class="title">Discount</div>
+                            <input type="text" placeholder="Discount" name="discount">
+                        </div>
+
+                        <div class="part R Col" data-for="date">
+                            <div class="title">End date</div>
+                            <input type="date" name="date">
+                        </div>
+
+                        <div class="part R Col" data-for="done">
+                            <label class="R C">
+                                <input type="checkbox" name="done">
+                                <span></span>
+                                <span class="R C">Finished</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="cardsholder one"></div>
+
+                    <button class="more">View More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##################################### Window -->
+
+    <div class="addcoupon overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Add New Coupon</div>
+            <div class="data">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="value" placeholder="Value">
+                <input type="text" name="discount" placeholder="Discount">
+                <div class="radio R Col C">
+                    <label class="R C">
+                        <span>Num</span>
+                        <input type="radio" name="end" value="num" checked>
+                        <input type="number" name="end_v" placeholder="00">
+                    </label>
+                    <label class="R C">
+                        <span>Date</span>
+                        <input type="radio" name="end" value="date">
+                        <input type="date" name="end_v">
+                    </label>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+                <button>Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/JS/StateAuch.js"></script>
+    <script src="../Script/JS/DB.js"></script>
+    <script src="../Script/JS/layoutA.js"></script>
+    <script src="../Script/JS/couponA.js"></script>
+</body>
+
+</html>

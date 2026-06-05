@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenture</title>
+
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/account.css">
+    <link rel="icon" href="../Web_logo_bright.png">
+
+</head>
+
+<body>
+    <div class="Bigcontainer">
+        <div class="body R C">
+            <div class="container">
+                <div class="location"></div>
+                <div class="content">
+                    <div class="sidenav R Col">
+                        <div>Manage my profile</div>
+                        <span class="active" data-for="profile">My profile</span>
+                        <div data-for="logout">Log out</div>
+                    </div>
+
+                    <form class="Col active" data-form="profile">
+                        <div class="title">Edit Your Profile</div>
+                        <div class="smallinput R">
+                            <div class="R Col">
+                                <label for="first_name">First Name</label>
+                                <div class="input R Col">
+                                    <input class="grey" id="first_name" type="text" placeholder="####"
+                                        name="first_name">
+                                    <span class="err">Must Only Contain Letters</span>
+                                </div>
+                            </div>
+                            <div class=" R Col">
+                                <label for="last_name">Last Name</label>
+                                <div class="input R Col">
+                                    <input class="grey" id="last_name" type="text" placeholder="####" name="last_name">
+                                    <span class="err">Must Only Contain Letters</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="smallinput R">
+                            <div class="R Col">
+                                <label for="email">Email</label>
+                                <div class="input R Col">
+                                    <input class="grey" id="email" type="text" placeholder="####@gmail.com"
+                                        name="email">
+                                    <span class="err">Email Is Invalid</span>
+                                </div>
+                            </div>
+                            <div class="R Col">
+                                <label for="phone">Phone</label>
+                                <div class="input R Col">
+                                    <input class="grey" id="phone" type="text" placeholder="0100 000 0000" name="phone">
+                                    <span class="err">Phone Is Invalid</span>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="password">Password Changes</label>
+                        <div class="input R Col">
+                            <input class="grey" id="password" type="text" placeholder="Current Password"
+                                name="password">
+                            <span class="err">Password Is Wrong</span>
+                        </div>
+                        <div class="input R Col">
+                            <input class="grey" type="text" placeholder="New Password" name="new_password">
+                            <span class="err">
+                                Must Contain Uppercase, Lowercase, Number, Symbol and More That 8 Characters
+                            </span>
+                        </div>
+                        <div class="input R Col">
+                            <input class="grey" type="text" placeholder="Confirm New Password" name="confirm_password">
+                            <span class="err">Rewrite The New Password Here</span>
+                        </div>
+
+                        <div class="buttons R C">
+                            <button>Cancel</button>
+                            <input type="submit" value="Save Changes">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##################################### Window -->
+
+    <div class="logoutwindow overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Confirm Log Out</div>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+                <button>Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/JS/StateAuch.js"></script>
+    <script src="../Script/JS/DB.js"></script>
+    <script src="../Script/JS/layoutA.js"></script>
+    <script src="../Script/JS/accountA.js"></script>
+</body>
+
+</html>

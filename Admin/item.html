@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenture</title>
+
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/item.css">
+    <link rel="icon" href="../Web_logo_bright.png">
+
+</head>
+
+<body>
+    <div class="Bigcontainer">
+        <div class="body R C">
+            <div class="container">
+                <div class="location"></div>
+                <div class="btns R">
+                    <button class="edit">Edit Item</button>
+                    <button class="del">Delete Item</button>
+                </div>
+                <div class="content R Col">
+                    <div class="mainitem">
+                        <div class="images">
+                            <div class="all"></div>
+                        </div>
+                        <div class="iteminfo R Col special">
+                            <div class="title">########</div>
+                            <div class="rate R C">
+                                <div class="stars R C">
+                                    <svg viewBox="0 0 426.667 426.667">
+                                        <polygon points="213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91 
+	                                    81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 "></polygon>
+                                    </svg>
+                                    <svg viewBox="0 0 426.667 426.667">
+                                        <polygon points="213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91 
+	                                    81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 "></polygon>
+                                    </svg>
+                                    <svg viewBox="0 0 426.667 426.667">
+                                        <polygon points="213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91 
+	                                    81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 "></polygon>
+                                    </svg>
+                                    <svg viewBox="0 0 426.667 426.667">
+                                        <polygon points="213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91 
+	                                    81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 "></polygon>
+                                    </svg>
+                                    <svg viewBox="0 0 426.667 426.667">
+                                        <polygon points="213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91 
+	                                    81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 "></polygon>
+                                    </svg>
+                                </div>
+                                <div class="review">(<span>####</span> Review)</div>
+                                <div class="sep"></div>
+                                <div class="stock">#####</div>
+                                <div class="new">NEW</div>
+                                <div class="discount">-50%</div>
+                            </div>
+                            <div class="price R C">
+                                <span>#,####</span>
+                                <span>#,####</span>
+                            </div>
+                            <div class="detail">
+                                ################################################
+                            </div>
+                            <div class="colors R C">
+                                <span>Colours:</span>
+                                <div class="R C"></div>
+                            </div>
+                            <div class="itemdata R Col">
+                                <div class="dimension">Dimensions: <span>#######</span></div>
+                                <div class="weight">Weight Capacity: <span>#####</span></div>
+                                <div class="material">Materials: <span>######</span></div>
+                            </div>
+                            <div class="data">
+                                <div class="num_sold">Number Sold: <span></span></div>
+                                <div class="cat">
+                                    Category:
+                                    <div class="cats R">
+                                    </div>
+                                </div>
+                                <div class="sub_cat">
+                                    Sub Category:
+                                    <div class="cats R">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SVGs -->
+    <svg viewBox="0 0 426.667 426.667" class="hide starsvg">
+        <polygon points="213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91 
+81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 "></polygon>
+    </svg>
+    <svg viewBox="0 0 512 512" class="heartsvg hide">
+        <path
+            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+        </path>
+    </svg>
+
+    <!-- Windows -->
+    <div class="confirmdelete overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Confirm Deletion</div>
+            <span>This is permenant</span>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+                <button>Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="colorselect overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Select The Color</div>
+            <input type="color" name="color">
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+                <button>Select</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="subcatselect overflow">
+        <div class="windowdata R Col C">
+            <div class="title">Select The Sub Category</div>
+            <div class="subcats R">
+                <div>The Data Is Not Set Yet Wait A Sec</div>
+            </div>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="edititem overflow">
+        <div class="windowdata R Col C">
+            <div class="field R Col C">
+                <div class="R C">
+                    <span>Name:</span>
+                    <input type="text" name="name">
+                </div>
+                <div class="R C">
+                    <span>Detail:</span>
+                    <textarea type="text" name="detail"></textarea>
+                </div>
+
+                <div class="R C">
+                    <span>Price:</span>
+                    <input type="text" name="price" maxlength="7">
+                </div>
+                <div class="R C">
+                    <span>Weight:</span>
+                    <input type="text" name="weight" maxlength="7">
+                </div>
+                <div class="R C">
+                    <span>Width:</span>
+                    <input type="text" name="w" maxlength="7">
+                </div>
+                <div class="R C">
+                    <span>Height:</span>
+                    <input type="text" name="h" maxlength="7">
+                </div>
+                <div class="R C">
+                    <span>Depth:</span>
+                    <input type="text" name="d" maxlength="7">
+                </div>
+                <div class="R C space">
+                    <span>Category:</span>
+                    <input type="text" name="category">
+                </div>
+
+                <div class="R C space">
+                    <span>Discount:</span>
+                    <input type="text" name="discount_v" maxlength="3">
+                </div>
+
+                <div class="R C">
+                    <span>Instock:</span>
+                    <input type="checkbox" name="instock">
+                </div>
+
+                <div class="R C">
+                    <span>Is New:</span>
+                    <input type="checkbox" name="new">
+                </div>
+
+                <div></div>
+
+                <div class="R C">
+                    <span>Colors:</span>
+                    <input type="text" name="colors" hidden>
+                    <div class="subs R">
+                        <div class="add">+</div>
+                    </div>
+                </div>
+
+                <div class="R C">
+                    <span>Sub_Cat:</span>
+                    <input type="text" name="subcat" hidden>
+                    <div class="subs R">
+                        <div class="add">+</div>
+                    </div>
+                </div>
+
+                <div class="R C">
+                    <span>Material:</span>
+                    <input type="text" name="material">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="underline">Cancel</button>
+                <button>Edit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/JS/StateAuch.js"></script>
+    <script src="../Script/JS/DB.js"></script>
+    <script src="../Script/JS/layoutA.js"></script>
+    <script src="../Script/JS/itemA.js"></script>
+</body>
+
+</html>

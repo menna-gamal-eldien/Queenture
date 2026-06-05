@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenture</title>
+
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/store.css">
+    <link rel="icon" href="../Web_logo_bright.png">
+
+</head>
+
+<body>
+    <div class="Bigcontainer">
+        <div class="body R C">
+            <div class="container">
+                <div class="location"></div>
+                <div class="numitem">Profiles Found (<span>5</span>)</div>
+                <div class="content">
+                    <div class="filter R Col">
+                        <div class="title">Filter Profiles</div>
+                        <div class="R buttons">
+                            <button>Apply Filter</button>
+                            <button>Clear Filter</button>
+                        </div>
+
+                        <div class="part R Col" data-for="name">
+                            <div class="title">Name</div>
+                            <input type="text" placeholder="Name Of Profile" name="name">
+                        </div>
+
+                        <div class="part R Col" data-for="email">
+                            <div class="title">Email</div>
+                            <input type="text" placeholder="blah@gmail.com" name="email">
+                        </div>
+
+                        <div class="part R Col" data-for="date">
+                            <div class="title">Date Created</div>
+                            <input type="date" name="date">
+                        </div>
+
+                        <div class="part R Col" data-for="order">
+                            <div class="title">Number Of orders</div>
+                            <input type="number" name="order">
+                        </div>
+                        <div class="part R Col" data-for="return">
+                            <div class="title">Number Of returns</div>
+                            <input type="number" name="return">
+                        </div>
+                        <div class="part R Col" data-for="cancel">
+                            <div class="title">Number Of cancels</div>
+                            <input type="number" name="cancel">
+                        </div>
+
+                        <div class="part R Col" data-for="admin">
+                            <label class="R C">
+                                <input type="checkbox" name="admin">
+                                <span></span>
+                                <span class="R C">Admin</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="cardsholder three">
+                    </div>
+
+                    <button class="more">View More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/JS/StateAuch.js"></script>
+    <script src="../Script/JS/DB.js"></script>
+    <script src="../Script/JS/layoutA.js"></script>
+    <script src="../Script/JS/profilesA.js"></script>
+</body>
+
+</html>

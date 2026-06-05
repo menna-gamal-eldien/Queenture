@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenture</title>
+
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/store.css">
+    <link rel="icon" href="../Web_logo_bright.png">
+
+</head>
+
+<body>
+    <div class="Bigcontainer">
+        <div class="body R C">
+            <div class="container">
+                <div class="location"></div>
+                <div class="numitem">Items Found (<span>5</span>)</div>
+                <button class="additem"><a class="remove" href="./newitem.html" target="_blank">Add New
+                        Item</a></button>
+                <div class="content">
+                    <div class="filter R Col">
+                        <div class="title">Filter Items</div>
+                        <div class="R buttons">
+                            <button>Apply Filter</button>
+                            <button>Clear Filter</button>
+                        </div>
+
+                        <div class="part R Col" data-for="category">
+                            <div class="title">Category</div>
+
+                            <label class="R C">
+                                <input type="checkbox" name="bed">
+                                <span></span>
+                                <span>Bed</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="chair">
+                                <span></span>
+                                <span>Chair</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="curtain">
+                                <span></span>
+                                <span>Curtain</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="desk">
+                                <span></span>
+                                <span>Desk</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="fridge">
+                                <span></span>
+                                <span>Fridge</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="lamp">
+                                <span></span>
+                                <span>Lamp</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="microwave">
+                                <span></span>
+                                <span>Microwave</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="oven">
+                                <span></span>
+                                <span>Oven</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="sofa">
+                                <span></span>
+                                <span>Sofa</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="table">
+                                <span></span>
+                                <span>Table</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="tvset">
+                                <span></span>
+                                <span>Tv set</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="cupboard">
+                                <span></span>
+                                <span>Cupboard</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="wash">
+                                <span></span>
+                                <span>Wash Machine</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="bathtub">
+                                <span></span>
+                                <span>Bathtub</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="mirror">
+                                <span></span>
+                                <span>Mirror</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="room">
+                                <span></span>
+                                <span>Room</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="swing">
+                                <span></span>
+                                <span>Swing</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="toilet">
+                                <span></span>
+                                <span>Toilet Paper Holder</span>
+                            </label>
+                        </div>
+
+                        <div class="part R Col" data-for="price">
+                            <div class="title">Price</div>
+                            <input type="text" placeholder="Min" name="price_min">
+                            <input type="text" placeholder="Max" name="price_max">
+                        </div>
+
+                        <div class="part R Col" data-for="special">
+                            <div class="title">Special</div>
+
+                            <label class="R C">
+                                <input type="checkbox" name="new">
+                                <span></span>
+                                <span class="R C">New</span>
+                            </label>
+
+                            <label class="R C">
+                                <input type="checkbox" name="discount">
+                                <span></span>
+                                <span>Discount</span>
+                            </label>
+
+                        </div>
+
+                        <div class="part R Col" data-for="weight">
+                            <div class="title">Weight Capacity</div>
+                            <input type="text" placeholder="Enter Min Weight" name="weight_min">
+                            <input type="text" placeholder="Enter Max Weight" name="weight_max">
+                        </div>
+
+                        <div class="part R Col" data-for="dimension">
+                            <div class="title">Dimensions</div>
+                            <input type="text" placeholder="W" name="w">
+                            <input type="text" placeholder="H" name="h">
+                            <input type="text" placeholder="D" name="d">
+                        </div>
+                    </div>
+                    <div class="cardsholder"></div>
+                    <button class="more">View More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##################################### SVG -->
+    <svg viewBox="0 0 426.667 426.667" class="hide starsvg">
+        <polygon points="213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91 
+            81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 "></polygon>
+    </svg>
+
+    <script src="../Script/JS/StateAuch.js"></script>
+    <script src="../Script/JS/DB.js"></script>
+    <script src="../Script/JS/layoutA.js"></script>
+    <script src="../Script/JS/storeA.js"></script>
+</body>
+
+</html>
