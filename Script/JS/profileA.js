@@ -121,7 +121,6 @@ function START() {
 START();
 
 function Setprofile(Profile) {
-    console.log(Profile)
     document.querySelector(".location span:last-of-type").innerHTML = Profile["first_name"] + " " + Profile["last_name"];
     document.querySelector(".title.name span").innerHTML = Profile["first_name"] + " " + Profile["last_name"];
     document.querySelector(".email span:not(.small)").innerHTML = Profile["email"];
