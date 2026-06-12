@@ -1,0 +1,268 @@
+.content {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    gap: 100px;
+}
+
+.billdetail {
+    gap: 20px;
+}
+
+.billdetail .title {
+    font-size: 2.5rem;
+}
+
+.billdetail>div {
+    gap: 5px;
+}
+
+.billdetail>div:last-of-type {
+    justify-content: start;
+}
+
+label {
+    color: var(--Main_Color);
+    font-weight: bold;
+}
+
+.billdetail>div label::after {
+    content: "*";
+    color: var(--Red);
+    font-weight: bold;
+}
+
+.billdetail>div:nth-of-type(4) {
+    position: relative;
+}
+
+.billdetail input+.list {
+    width: 50%;
+    height: 150px;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 20px;
+    overflow-y: scroll;
+    background: var(--Main_Color);
+    position: absolute;
+    bottom: -160px;
+    justify-content: stretch;
+    display: none;
+}
+
+.billdetail input+.list.active {
+    display: flex;
+}
+
+.billdetail input+.list span {
+    font-size: 1.3rem;
+    color: var(--White);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.billdetail input+.list span:hover {
+    filter: brightness(0.9);
+    background-color: var(--White);
+    color: var(--Main_Color);
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.bill {
+    gap: 15px;
+    margin-top: 80px;
+}
+
+.bill .item {
+    display: grid;
+    grid-template: 50px / 50px 1fr 100px;
+    gap: 15px;
+    align-items: center;
+}
+
+.bill .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.bill .item .name {
+    font-size: 1.3rem;
+    color: var(--Main_Color);
+}
+
+.bill .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--Main_Color);
+    justify-self: end;
+}
+
+.bill .subtotal,
+.bill .shipping,
+.bill .coupondiv,
+.bill .total {
+    justify-content: space-between;
+    border-top: 1px solid var(--Main_Color);
+}
+
+.bill>div:not(.item) span {
+    padding: 10px 0 0;
+}
+
+.bill span:first-of-type {
+    padding: 10px 0 0;
+    color: var(--Gray);
+    opacity: 0.5;
+    font-size: 1.1rem;
+}
+
+.bill .total .price {
+    color: var(--Red);
+}
+
+.bill .method {
+    gap: 10px;
+}
+
+.bill .paymentholder {
+    gap: 10px;
+}
+
+.bill .payment span:first-of-type {
+    padding: 0;
+}
+
+.bill .payment {
+    justify-content: space-between;
+}
+
+.radio {
+    width: 22px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--White);
+    border: 1px var(--Main_Color) solid;
+    cursor: pointer;
+    padding: 3px;
+}
+
+input[type="radio"]:checked+.radio span {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--Main_Color);
+    opacity: 1;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.bill .svgs {
+    height: 50px;
+    display: grid;
+    grid-template: 1fr / repeat(2, 50px);
+    place-content: center;
+    align-items: center;
+}
+
+.coupon {
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.coupon input {
+    width: 350px;
+    border: var(--Main_Color) 1px solid;
+    font-size: 1rem;
+}
+
+.coupon input::placeholder {
+    font-size: 1rem;
+}
+
+.coupon button {
+    width: 220px;
+}
+
+@media screen and (max-width:768px) {
+    .content {
+        grid-template: 1fr 1fr / 1fr;
+        gap: 40px;
+    }
+
+    .billdetail {
+        gap: 10px;
+    }
+
+    .billdetail .title {
+        font-size: var(--F-titleS);
+    }
+
+    .billdetail>div:last-of-type {
+        justify-content: start;
+    }
+
+    .billdetail>div input {
+        width: 100%;
+    }
+
+    .billdetail input+.list {
+        width: 20%;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .billdetail input+.list span {
+        font-size: var(--F-textS);
+    }
+
+    .bill {
+        gap: 10px;
+        margin-top: unset;
+    }
+
+    .bill .item {
+        grid-template: 45px / 45px 1fr 100px;
+    }
+
+    .bill .item .name {
+        font-size: var(--F-textS);
+        font-weight: bold;
+    }
+
+    .bill .price {
+        font-size: var(--F-text);
+    }
+
+    .bill span:first-of-type {
+        font-size: var(--F-textS);
+    }
+
+    .radio {
+        width: 15px;
+    }
+
+    .bill .svgs {
+        height: 40px;
+        grid-template: 1fr / repeat(2, 40px);
+    }
+
+    .coupon input {
+        width: unset;
+    }
+
+    .coupon button {
+        width: max-content;
+        height: max-content;
+        padding: 10px;
+    }
+
+    button.placeorder {
+        width: max-content;
+    }
+
+}

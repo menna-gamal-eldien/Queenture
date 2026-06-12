@@ -1,0 +1,268 @@
+.numitem {
+    font-weight: bold;
+    color: var(--Main_Color);
+}
+
+.content {
+    display: grid;
+    grid-template: 1fr / 220px 1fr;
+    gap: 80px;
+}
+
+.filter,
+.cardsholder {
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--Good-gray);
+    border-radius: 10px;
+}
+
+.filter .buttons {
+    gap: 5px;
+}
+
+.filter .buttons button {
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+.filter .buttons button:last-of-type {
+    background-color: var(--White);
+    color: var(--Red);
+    font-weight: bold;
+}
+
+.filter .part {
+    gap: 5px;
+}
+
+.filter .part .title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.filter input[type="checkbox"] {
+    display: none;
+}
+
+.filter label {
+    justify-content: start;
+    gap: 10px;
+}
+
+.filter label span:first-of-type {
+    display: block;
+    width: 15px;
+    aspect-ratio: 1/1;
+    border-radius: 3px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.filter label input:checked+span {
+    background-color: var(--Main_Color);
+}
+
+.filter svg {
+    width: 15px;
+    height: 15px;
+}
+
+.cardsholder {
+    display: grid;
+    /* grid-template-columns: repeat(4, 200px); */
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 400px;
+    gap: 50px;
+}
+
+/* ////////////////////////////////////// One */
+.buttons button {
+    width: max-content;
+}
+
+.cardsholder.one {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 100px;
+}
+
+.cardsholder.one .coupon {
+    justify-content: space-around;
+    border: 2px solid var(--Main_Color);
+    border-radius: 10px;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.cardsholder.one .coupon .done {
+    height: 100%;
+    background-color: var(--Green);
+    width: 15px;
+    position: absolute;
+    right: 10px;
+}
+
+.cardsholder.one .coupon .done.end {
+    background-color: var(--Red);
+}
+
+/* ////////////////////////////////////// Three */
+
+.cardsholder.three {
+    grid-template-columns: repeat(3, 280px);
+    grid-auto-rows: 180px;
+}
+
+.cardsholder.three .profilediv {
+    gap: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 20px;
+    border-radius: 10px;
+    border: var(--Main_Color) 2px solid;
+    font-size: 1.2rem;
+}
+
+.cardsholder.three .profilediv:hover {
+    transform: scale(1.04);
+}
+
+.cardsholder.three .profilediv .name {
+    max-width: 280px;
+    text-wrap-mode: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cardsholder.three .profilediv .data {
+    justify-content: space-around;
+}
+
+.cardsholder.three .profilediv .data>div {
+    padding: 10px;
+    background-color: blue;
+    font-weight: bold;
+    text-align: center;
+    min-width: 20%;
+    border-radius: 10px;
+}
+
+.cardsholder.three .profilediv .data .orders {
+    background-color: var(--Green);
+}
+
+.cardsholder.three .profilediv .data .returns {
+    background-color: var(--Gold);
+}
+
+.cardsholder.three .profilediv .data .cancels {
+    background-color: var(--Red);
+    color: var(--White)
+}
+
+
+.more {
+    grid-area: 2/1/3/3;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.more.disabled {
+    display: none;
+}
+
+@media screen and (max-width:1900px) {
+    .cardsholder {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .content {
+        display: grid;
+        grid-template: 1fr / 220px 1fr;
+        gap: 10px;
+    }
+
+    .filter .title {
+        font-size: var(--F-textB)
+    }
+
+    .filter .buttons button {
+        width: max-content;
+        font-size: var(--F-smallB);
+    }
+
+    .filter .part .title {
+        font-size: var(--F-textS);
+        margin-bottom: 5px;
+    }
+
+    .filter label {
+        justify-content: start;
+        gap: 10px;
+    }
+
+    .cardsholder {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: max-content;
+        gap: 20px;
+    }
+
+    /* ////////////////////////////////////// One */
+    .cardsholder.one {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 30px;
+        gap: 10px;
+    }
+
+    .cardsholder.one .coupon {
+        font-size: var(--F-textS);
+        overflow: hidden;
+    }
+
+    .cardsholder.one .coupon .done {
+        width: 10px;
+        right: 0px;
+    }
+
+    /* ////////////////////////////////////// Three */
+
+    .cardsholder.three {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 100px;
+    }
+
+    .cardsholder.three .profilediv {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr max-content;
+
+        gap: 10px;
+        padding: 10px;
+        font-size: var(--F-text);
+    }
+
+    .cardsholder.three .profilediv .name {
+        max-width: 100%;
+    }
+
+    .cardsholder.three .profilediv .data {
+        grid-area: 1/2/3/2;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .cardsholder.three .profilediv .data>div {
+        padding: 10px;
+        min-width: unset;
+    }
+
+    .more {
+        width: max-content;
+    }
+
+    .more.disabled {
+        display: none;
+    }
+
+}

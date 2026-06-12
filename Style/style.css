@@ -1,0 +1,1187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Main_Color: #113045;
+    --White: white;
+    --Light-gray: #f7f4ef;
+    --Good-gray: #f3f3f3;
+    --Grey: #6e7d88;
+    --Red: #e02827;
+    --Gold: #bf9d87;
+    --Yellow: #ffb034;
+    --Green: #02ca11;
+
+    --header: 90px;
+    --headerL: 60px;
+
+    --footer: 466px;
+    --footerS: 326px;
+
+    --F-titleB: 5rem;
+    --F-title: 2rem;
+    --F-titleS: 1.5rem;
+    --F-textB: 1.3rem;
+    --F-text: 1.2rem;
+    --F-textS: 1rem;
+    --F-smallB: 0.8rem;
+    --F-small: 0.6rem;
+}
+
+a.remove,
+a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+body {
+    overscroll-behavior: none;
+}
+
+.Col {
+    flex-direction: column;
+}
+
+.R {
+    display: flex;
+}
+
+.C {
+    justify-content: center;
+    align-items: center;
+}
+
+.Bigcontainer {
+    width: 100vw;
+    min-height: 100vh;
+    max-height: max-content;
+
+    display: grid;
+    grid-template: var(--header) 1fr var(--footer) / 1fr;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+}
+
+.header {
+    border-bottom: solid 2px #d2d2d2;
+}
+
+.header .container {
+    padding: 0px 40px 20px;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.logo {
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logo span {
+    font-size: var(--F-titleS);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.nav {
+    width: 50%;
+    height: 50px;
+    justify-content: space-between;
+    font-size: var(--F-textB);
+    color: var(--Main_Color);
+    font-weight: 500;
+}
+
+.nav span {
+    cursor: pointer;
+}
+
+.nav span:hover {
+    text-decoration: underline;
+}
+
+.control {
+    height: 45px;
+    gap: 20px;
+}
+
+.profile {
+    height: 10px;
+    gap: 5px;
+}
+
+.profile>div {
+    cursor: pointer;
+}
+
+.profile svg {
+    width: 40px;
+    height: 25px;
+    fill: var(--Main_Color);
+}
+
+.profile .account.active {
+    width: 40px;
+    background: var(--Red);
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.profile .account.active.Admin {
+    background-color: blue;
+}
+
+.profile .account.active svg {
+    fill: transparent;
+    stroke: var(--White);
+    stroke-width: 32px;
+}
+
+.profile a {
+    position: relative;
+}
+
+.profile .noti {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--Red);
+    display: none;
+    place-content: center;
+    position: absolute;
+    top: -10px;
+    right: 3px;
+
+    font-size: var(--F-small);
+    color: var(--White);
+}
+
+.profile a.active .noti {
+    display: grid;
+
+}
+
+/* Body */
+
+.body {
+    align-items: start;
+}
+
+.body .container {
+    padding: 60px;
+    display: grid;
+    gap: 30px;
+    grid-template: 50px 1fr/ 100%;
+}
+
+.location {
+    color: var(--Main_Color);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.location span:not(:last-child) {
+    opacity: 0.5;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--Main_Color);
+    position: relative;
+    height: max-content;
+}
+
+.footer::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #d2d2d2;
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+    opacity: 0.2;
+}
+
+.footer .container {
+    position: relative;
+    display: grid;
+    grid-template: 1fr 50px / 1fr 4fr;
+    padding: 30px;
+    height: max-content;
+}
+
+.footer .container>div:nth-of-type(1) {
+    align-items: start;
+    color: var(--White);
+}
+
+.footer .logo {
+    gap: 0;
+}
+
+.footer .logo span {
+    margin: 0 0 20px;
+}
+
+.footer .container>div:nth-of-type(1) div:nth-of-type(2) {
+    border-top: 2px solid var(--Grey);
+    padding: 20px 0px;
+    gap: 20px;
+    margin-left: 30px;
+    font-size: 1.3rem;
+}
+
+.footer input {
+    background-color: var(--Grey);
+    border: 2px solid var(--Light-gray);
+    color: var(--White);
+}
+
+.footer input::placeholder {
+    color: var(--White);
+}
+
+.footer .links {
+    padding: 45px 0;
+    justify-content: space-around;
+    color: var(--White);
+    font-size: 1.1rem;
+}
+
+.footer .links>div {
+    gap: 10px;
+}
+
+.footer .links>div>span:first-of-type {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.footer .links>div>div {
+    gap: 20px;
+}
+
+.footer .codebar {
+    gap: 20px;
+}
+
+.footer .barcode {
+    width: 100px;
+    height: 100px;
+    border: 2px dotted green;
+    border-radius: 10px;
+}
+
+.footer .link {
+    gap: 15px;
+}
+
+.footer .social {
+    gap: 20px;
+}
+
+.footer .social svg {
+    height: 25px;
+    fill: var(--White);
+}
+
+.footer .copyright {
+    font-size: 1.3rem;
+    color: var(--Grey);
+    opacity: 0.5;
+    text-align: center;
+    grid-area: 2/1/2/3;
+    padding-top: 30px;
+}
+
+/* #########################################General############################# */
+.title {
+    font-size: var(--F-title);
+    color: var(--Main_Color);
+    font-weight: bold;
+}
+
+.titleB {
+    font-size: var(--F-titleB);
+    color: var(--Main_Color);
+    font-weight: bold;
+}
+
+span.small {
+    opacity: 0.5;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* ######################################### Fields ############################# */
+
+button,
+input[type="submit"] {
+    width: 150px;
+    padding: 15px;
+    font-size: 1.05rem;
+    background-color: var(--Red);
+    color: var(--White);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.4s;
+}
+
+button:hover:not(.disabled),
+input[type="submit"]:hover:not(.disabled) {
+    filter: brightness(0.85);
+    transform: scale(1.05);
+}
+
+button.underline {
+    background-color: transparent;
+    text-decoration: underline 2px var(--Main_Color);
+    color: var(--Main_Color);
+    font-weight: bold;
+}
+
+button.underline:hover {
+    filter: unset;
+}
+
+input,
+textarea {
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+input {
+    height: 50px;
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+    resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    opacity: 0.5;
+    font-size: 1.1rem;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+}
+
+input.underline {
+    border-bottom: 2px solid #d3d3d3;
+}
+
+input.grey,
+textarea.grey {
+    background-color: var(--Good-gray);
+    color: black;
+}
+
+input.grey::placeholder,
+textarea.grey::placeholder {
+    color: var(--Grey);
+    font-weight: bold;
+}
+
+input.border,
+textarea.border {
+    border: 2px solid var(--Main_Color);
+    width: 100%;
+    height: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+
+input.char {
+    padding: 10px;
+    width: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+input.char::placeholder {
+    font-size: 1.5rem;
+}
+
+.inputs,
+.input {
+    gap: 5px;
+}
+
+.input span {
+    display: none;
+}
+
+.input.error span {
+    display: block;
+}
+
+.input.error input {
+    border: 2px solid var(--Red);
+}
+
+span.err {
+    color: var(--Red);
+    font-weight: bold;
+}
+
+/* ######################################### Cards ############################# */
+
+.card {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+.related .card {
+    height: 300px;
+}
+
+.card .image {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.card .image .infodiv,
+.newarrival .infodiv {
+    position: absolute;
+    background-color: var(--Main_Color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--White);
+    width: 100%;
+    display: grid;
+    place-content: center;
+    padding: 10px;
+    letter-spacing: 1px;
+    bottom: -50px;
+    transition: 0.3s;
+    height: unset;
+}
+
+.card .image:hover .infodiv,
+.newarrival .card:hover .infodiv {
+    bottom: 0px;
+}
+
+.card .info {
+    gap: 5px;
+}
+
+.card .info .title {
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 63px;
+}
+
+.card .priceholder {
+    gap: 20px;
+}
+
+.card .info .oldprice {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.card .info .price {
+    font-size: 1rem;
+    color: var(--Red);
+    font-weight: bold;
+    filter: brightness(0.8);
+}
+
+.card .info .rate {
+    gap: 20px;
+}
+
+.card .info .rate .stars {
+    height: 20px;
+    gap: 4px;
+}
+
+.card .stars svg {
+    height: 100%;
+    fill: var(--Grey);
+}
+
+.card .stars svg.active {
+    fill: var(--Yellow);
+}
+
+.card .rate .val {
+    color: var(--Grey);
+    opacity: 0.9;
+}
+
+.card .image .del,
+.card .image .heart,
+.card .image .newdiv,
+.card .image .discount {
+    position: absolute;
+    top: 6px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--White);
+    padding: 3px 14px;
+}
+
+.card .image .del,
+.card .image .heart {
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--White);
+    padding: 6px;
+    cursor: pointer;
+}
+
+.card .image .heart.active svg {
+    fill: var(--Red);
+    stroke: var(--Red);
+}
+
+.card .image .newdiv {
+    left: 5px;
+    border-radius: 5px;
+    background-color: var(--Green);
+}
+
+.card .image .discount {
+    left: 5px;
+    border-radius: 5px;
+    background-color: var(--Red);
+}
+
+.card .image .discount.down {
+    top: 40px;
+}
+
+.cardorganize {
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.cardorganize>span {
+    font-size: 1.3rem;
+    color: var(--Gold);
+    filter: brightness(0.8);
+}
+
+.cardorganize>div {
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    gap: 60px;
+}
+
+.btns {
+    gap: 20px;
+}
+
+.btns .del {
+    color: var(--Red);
+    border: 2px solid var(--Red);
+    background-color: var(--White);
+    font-weight: bold;
+}
+
+.btns .del:hover {
+    transform: unset;
+    opacity: 1;
+    background-color: var(--Red);
+    color: var(--White);
+    filter: unset;
+}
+
+.btns .edit {
+    font-weight: bold;
+    background-color: var(--Main_Color);
+    color: var(--White);
+    transition: 0.2s;
+}
+
+.btns .edit:hover {
+    transform: unset;
+    opacity: 1;
+    background-color: var(--White);
+    color: var(--Main_Color);
+    border: 3px solid var(--Main_Color);
+    filter: unset;
+}
+
+/* ######################################### Window ############################# */
+
+.overflow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    display: none;
+}
+
+.overflow.active {
+    display: block;
+}
+
+.overflow .windowdata {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 30px;
+    gap: 30px;
+}
+
+.overflow .windowdata span.err {
+    color: var(--Red);
+    opacity: 1;
+    font-weight: bold;
+    display: none;
+}
+
+.overflow .windowdata span.err.active {
+    display: block;
+}
+
+.overflow .windowdata span {
+    font-size: 1.2rem;
+    color: var(--Main_Color);
+    opacity: 0.5;
+}
+
+.addaddress .windowdata .body {
+    width: 1000px;
+    gap: 7px;
+}
+
+.addpayment .windowdata .body {
+    width: 500px;
+    gap: 7px;
+}
+
+.addaddress textarea {
+    height: unset;
+}
+
+.edititem .field {
+    gap: 20px;
+    width: 1000px;
+    display: grid;
+    grid-template: repeat(6, 50px)/ repeat(4, 1fr);
+}
+
+.edititem .field>div {
+    height: 100%;
+    width: 100%;
+}
+
+.edititem .field>div:nth-of-type(1) {
+    grid-column: span 2;
+}
+
+.edititem .field>div:nth-of-type(2) {
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.edititem .field>div:nth-of-type(13),
+.edititem .field>div:nth-of-type(14) {
+    grid-column: span 2;
+    justify-content: start;
+}
+
+.edititem .field>div:nth-of-type(15) {
+    grid-column: span 4;
+}
+
+.edititem .field div {
+    gap: 20px;
+}
+
+.edititem input,
+.edititem textarea {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.edititem .windowdata {
+    max-height: 660px;
+}
+
+.edititem input[type="checkbox"] {
+    width: 30px;
+}
+
+.edititem .subs {
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.edititem input[name="colors"]+.subs div {
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid black;
+    background: green;
+}
+
+.edititem input[name="colors"]+.subs div .close {
+    position: absolute;
+    background-color: var(--Red);
+    color: var(--White);
+    display: grid;
+    place-content: center;
+    font-size: 0.4rem;
+    padding: 0px;
+    top: -7px;
+    right: -7px;
+    width: 13px;
+    cursor: pointer;
+}
+
+.edititem input[name="subcat"]+.subs div {
+    padding: 10px;
+    background-color: var(--Main_Color);
+    color: var(--White);
+    border-radius: 15px;
+}
+
+.edititem input[name="subcat"]+.subs div .close {
+    position: absolute;
+    background-color: var(--Red);
+    display: grid;
+    place-content: center;
+    font-size: 0.6rem;
+    padding: 2px;
+    top: -4px;
+    right: -1px;
+    cursor: pointer;
+}
+
+.edititem .subs>div {
+    position: relative;
+}
+
+.edititem .add {
+    text-align: center;
+    background-color: var(--White) !important;
+    border: 2px solid var(--Main_Color);
+    color: var(--Main_Color) !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.colorselect,
+.catselect,
+.subcatselect {
+    z-index: 900000;
+}
+
+.catselect .subcats,
+.subcatselect .subcats {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.catselect .subcats div,
+.subcatselect .subcats div {
+    padding: 7px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: var(--Main_Color);
+    color: var(--White);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.catselect .subcats div:hover,
+.subcatselect .subcats div:hover {
+    opacity: 0.6;
+}
+
+.addcoupon input {
+    border: 1px solid var(--Main_Color);
+}
+
+.addcoupon .radio {
+    margin-top: 10px;
+    gap: 10px;
+    align-items: start;
+}
+
+.addcoupon label {
+    gap: 10px;
+    justify-content: start;
+}
+
+.addcoupon input[type="radio"]+input {
+    display: none;
+}
+
+.addcoupon input:checked+input {
+    display: block;
+}
+
+/* ######################################### Notifications ############################# */
+
+.notiparent {
+    position: fixed;
+    top: 10px;
+    left: -250px;
+    width: 250px;
+    gap: 10px;
+}
+
+.datagiven {
+    width: 250px;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.datagiven.active {
+    left: 260px;
+}
+
+.datagiven.good {
+    background-color: var(--Green);
+}
+
+.datagiven.ok {
+    background-color: var(--Yellow);
+}
+
+.datagiven.bad {
+    background-color: var(--Red);
+    color: var(--White);
+}
+
+/* Screen */
+@media screen and (min-width:1900px) {}
+
+/* Laptop - Tablet*/
+@media screen and (min-width:768px) {
+    .Bigcontainer {
+        grid-template: var(--headerL) 1fr var(--footer) / 1fr;
+    }
+
+    .container {
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .logo span {
+        font-size: var(--F-textB);
+    }
+
+    .nav {
+        align-items: end;
+        font-size: var(--F-text);
+        font-weight: bold;
+    }
+
+    .control {
+        align-items: end;
+        padding-bottom: 5px;
+    }
+
+    .profile .account.active {
+        width: 35px;
+    }
+
+    .profile div.active .noti {
+        top: -8px
+    }
+}
+
+/* Phone */
+@media screen and (max-width:768px) {
+    .Bigcontainer {
+        border: 2px solid red;
+        width: 768px;
+        grid-template: var(--headerL) 1fr var(--footerS) / 768px;
+    }
+
+    .container {
+        max-width: 768px;
+    }
+
+    .header .container {
+        padding: 0 15px 20px;
+    }
+
+    .nav,
+    .control {
+        padding-top: 25px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .logo span {
+        font-size: var(--F-textS);
+    }
+
+    .nav {
+        font-size: calc(var(--F-smallB) + 0.1rem);
+    }
+
+    .profile svg {
+        width: 30px;
+        height: 20px;
+    }
+
+    .footer::before {
+        bottom: 30px;
+    }
+
+    .footer .container {
+        padding: 10px;
+        gap: 10px;
+        grid-template: 1fr max-content/ 1fr 4fr;
+    }
+
+    .footer .container>div:nth-of-type(1) div:nth-of-type(2) {
+        padding: 10px 0px;
+        gap: 10px;
+        margin-left: 5px;
+        font-size: var(--F-textS);
+    }
+
+    .footer .links>div>span:first-of-type {
+        font-size: var(--F-textS);
+    }
+
+    .footer .links {
+        padding: 45px 0 0 0;
+        font-size: var(--F-smallB);
+    }
+
+    .footer .social svg {
+        height: 20px;
+    }
+
+    .footer .copyright {
+        font-size: var(--F-textS);
+        padding-top: 5px;
+    }
+
+    /* ######################################### Fields ############################# */
+    button,
+    input[type="sumbit"] {
+        width: 80px;
+        padding: 10px;
+        font-size: var(--F-smallB);
+        font-weight: bold;
+    }
+
+    input,
+    textarea {
+        width: 163px;
+        height: 35px;
+        font-size: var(--F-textS);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        font-size: var(--F-textS);
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 15px;
+    }
+
+    input.char,
+    input.char::placeholder {
+        font-size: var(--F-textS);
+    }
+
+    /* ######################################### Cards ############################# */
+
+    .related .card {
+        height: 100%;
+    }
+
+    .card .image .infodiv,
+    .newarrival .infodiv {
+        font-size: var(--F-smallB);
+    }
+
+    .card .info .title {
+        font-size: var(--F-textS);
+    }
+
+    .card .info .price {
+        font-size: var(--F-textS);
+    }
+
+    .card .image .del,
+    .card .image .heart,
+    .card .image .newdiv,
+    .card .image .discount {
+        font-size: var(--F-smallB);
+    }
+
+    .card .image .del,
+    .card .image .heart {
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+    }
+
+    .cardorganize {
+        margin-bottom: unset;
+    }
+
+    .cardorganize>span {
+        font-size: var(--F-text);
+    }
+
+    .cardorganize>div {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        gap: 10px;
+    }
+
+    .btns {
+        gap: 10px;
+    }
+
+    .btns button {
+        widtH: max-content;
+    }
+
+    /* ######################################### Window ############################# */
+
+    .overflow .windowdata {
+        top: 10%;
+        font-size: var(--F-textS);
+    }
+
+    .overflow button {
+        width: max-content;
+    }
+
+    .overflow .windowdata span {
+        font-size: var(--F-textS);
+    }
+
+    .addaddress .windowdata .body {
+        width: 400px;
+    }
+
+    .edititem .windowdata {
+        overflow-y: scroll;
+    }
+
+    .edititem .field {
+        width: 400px;
+        height: max-content;
+        grid-template: repeat(6, 50px)/ repeat(2, 1fr);
+        margin-top: 135px;
+    }
+
+    .edititem .field>div:nth-of-type(1) {
+        grid-column: span 2;
+    }
+
+    .edititem .field>div:nth-of-type(2) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .edititem .field>div:nth-of-type(13),
+    .edititem .field>div:nth-of-type(14),
+    .edititem .field>div:nth-of-type(15) {
+        grid-column: span 2;
+    }
+
+    .edititem .field div {
+        gap: 10px;
+    }
+
+    .edititem input[type="checkbox"] {
+        width: 15px;
+    }
+
+    .addcoupon .data {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .addcoupon input:not([type="radio"]) {
+        width: 100%;
+    }
+
+
+    /* ######################################### Notification ############################# */
+
+    .notiparent {
+        left: -200px;
+        width: 200px;
+        gap: 10px;
+    }
+
+    .datagiven {
+        width: 200px;
+        font-size: var(--F-textS);
+    }
+
+    .datagiven.active {
+        left: 220px;
+    }
+
+}

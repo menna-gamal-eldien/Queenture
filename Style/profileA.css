@@ -1,0 +1,138 @@
+.content>div {
+    gap: 20px;
+}
+
+.content>div>div:not(.title) {
+    font-size: 1.3rem;
+}
+
+.data {
+    gap: 20px;
+}
+
+label {
+    gap: 7px;
+}
+
+input+span {
+    opacity: 0.4;
+}
+
+input:checked+span {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.orders,
+.returns,
+.cancels {
+    gap: 20px;
+    display: none;
+}
+
+.orders.active,
+.returns.active,
+.cancels.active {
+    display: flex;
+}
+
+.orders>div,
+.returns>div,
+.cancels>div {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--Good-gray);
+    gap: 20px;
+    position: relative;
+    padding-bottom: 50px;
+    height: 190px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.items {
+    display: grid;
+    grid-template: 70px / 70px 30px repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 20px;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.items .img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.items .img:hover {
+    transform: scale(1.07);
+}
+
+.items .color {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.expandsvg {
+    position: absolute;
+    width: 50px;
+    aspect-ratio: 1/1;
+    bottom: 0px;
+    transition: 0.5s;
+    left: 50%;
+    transform: translate(-50%) rotate(0deg);
+    cursor: pointer;
+}
+
+div.active>.expandsvg {
+    transform: translate(-50%) rotate(180deg);
+}
+
+@media screen and (max-width:768px) {
+    .content .title {
+        font-size: var(--F-textB);
+    }
+
+    .content>div>div:not(.title) {
+        font-size: var(--F-textS);
+    }
+
+    .orders,
+    .returns,
+    .cancels {
+        gap: 10px;
+    }
+
+    .orders>div,
+    .returns>div,
+    .cancels>div {
+        height: 160px !important;
+    }
+
+    .orders>div.active,
+    .returns>div.active,
+    .cancels>div.active {
+        height: max-content !important;
+    }
+
+    .items {
+        grid-template: 50px / 50px 20px repeat(2, max-content);
+    }
+
+    .expandsvg {
+        width: 25px;
+    }
+
+}

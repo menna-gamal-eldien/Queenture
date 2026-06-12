@@ -1,0 +1,137 @@
+.content {
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+    gap: 40px;
+    min-height: 500px;
+}
+
+.content>* {
+    border-radius: 10px;
+    box-shadow: -20px 20px 20px var(--Grey);
+}
+
+.content>div {
+    padding: 40px;
+    gap: 40px;
+}
+
+.content>div div {
+    gap: 20px;
+    justify-content: start;
+}
+
+.content>div .svg {
+    padding: 10px;
+    background-color: var(--Red);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.content svg {
+    fill: var(--White);
+    width: 30px;
+    height: 30px;
+}
+
+.content>div span {
+    font-size: 1.6rem;
+    color: var(--Main_Color);
+    font-weight: bold;
+}
+
+.content>div>div>div:not(:nth-of-type(1)) span {
+    font-size: 1.2rem;
+    color: var(--Grey);
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.contacttous {
+    border-bottom: 2px solid #6e7d885e;
+    padding-bottom: 30px;
+}
+
+form {
+    gap: 30px;
+    padding: 30px;
+}
+
+.smallinput {
+    gap: 10px;
+}
+
+form div {
+    justify-content: space-between;
+}
+
+input[type="submit"] {
+    align-self: end;
+}
+
+@media screen and (max-width:768px) {
+
+    .content {
+        min-height: 300px;
+    }
+
+    .content>* {
+        box-shadow: -10px 10px 10px var(--Grey);
+    }
+
+    .content>div {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .content>div div {
+        gap: 5px;
+    }
+
+    .content>div .svg {
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .content svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .content>div span {
+        font-size: var(--F-text);
+    }
+
+    .content>div>div>div:not(:nth-of-type(1)) span {
+        font-size: var(--F-textS);
+        margin-bottom: 5px;
+    }
+
+    .contacttous {
+        padding-bottom: 10px;
+    }
+
+    form {
+        gap: 20px;
+    }
+
+    .smallinput {
+        gap: 5px;
+    }
+
+    .smallinput input {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100%;
+    }
+
+    input[type="submit"] {
+        align-self: end;
+        padding: 10px;
+    }
+
+}
