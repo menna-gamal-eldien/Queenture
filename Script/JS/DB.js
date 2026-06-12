@@ -1,31 +1,31 @@
 const DB = {
     "account": {
         "1": {
-            "first_name": "Menna",
-            "last_name": "Gamal Eldien",
-            "email": "mennagamaleldien@gmail.com",
-            "phone": "01015564659",
-            "passcode": "Menna2025?",
-            "isAdmin": 0,
-            "date_created": "2025-04-02"
+            "first_name": "Admin",
+            "last_name": "Admin",
+            "email": "admin123@gmail.com",
+            "phone": "01234567890",
+            "passcode": "Admin123#",
+            "isAdmin": 1,
+            "date_created": "2026-06-12"
         },
         "2": {
-            "first_name": "Yousuf",
-            "last_name": "Ahmed",
-            "email": "yousufgamal@gmail.com",
-            "phone": "01015564659",
-            "passcode": "Yousuf2020?",
-            "isAdmin": 1,
-            "date_created": "2025-04-11"
+            "first_name": "Client",
+            "last_name": "Client",
+            "email": "client123@gmail.com",
+            "phone": "09876543210",
+            "passcode": "Client123#",
+            "isAdmin": 0,
+            "date_created": "2026-06-12"
         }
     },
     "address": {
         "1": {
-            "user_id": "1",
+            "user_id": "2",
             "label": "Home",
-            "location": "163 Arabila",
+            "location": "somewhere on earth",
             "detail": "nothing",
-            "zip": 11835
+            "zip": 12345
         }
     },
     "admindata": [
@@ -40,7 +40,7 @@ const DB = {
     ],
     "bill": {
         "9": {
-            "user_id": "1",
+            "user_id": "2",
             "address_id": "1",
             "coupon_id": null,
             "payment_method": "bank",
@@ -49,7 +49,7 @@ const DB = {
             "user_del": 1
         },
         "10": {
-            "user_id": "1",
+            "user_id": "2",
             "address_id": "1",
             "coupon_id": null,
             "payment_method": "Cash",
@@ -58,7 +58,7 @@ const DB = {
             "user_del": 1
         },
         "11": {
-            "user_id": "1",
+            "user_id": "2",
             "address_id": "1",
             "coupon_id": null,
             "payment_method": "bank",
@@ -67,7 +67,7 @@ const DB = {
             "user_del": 0
         },
         "12": {
-            "user_id": "1",
+            "user_id": "2",
             "address_id": "1",
             "coupon_id": null,
             "payment_method": "cash",
@@ -76,7 +76,7 @@ const DB = {
             "user_del": 0
         },
         "14": {
-            "user_id": "1",
+            "user_id": "2",
             "address_id": "1",
             "coupon_id": "5",
             "payment_method": "bank",
@@ -85,7 +85,7 @@ const DB = {
             "user_del": 0
         },
         "15": {
-            "user_id": "1",
+            "user_id": "2",
             "address_id": "1",
             "coupon_id": null,
             "payment_method": "cash",
@@ -94,7 +94,7 @@ const DB = {
             "user_del": 0
         },
         "16": {
-            "user_id": "1",
+            "user_id": "2",
             "address_id": "1",
             "coupon_id": null,
             "payment_method": "bank",
@@ -103,7 +103,7 @@ const DB = {
             "user_del": 0
         },
         "17": {
-            "user_id": "1",
+            "user_id": "2",
             "address_id": "1",
             "coupon_id": null,
             "payment_method": "bank",
@@ -112,7 +112,7 @@ const DB = {
             "user_del": 0
         },
         "18": {
-            "user_id": "1",
+            "user_id": "2",
             "address_id": "1",
             "coupon_id": "8",
             "payment_method": "cash",
@@ -279,18 +279,11 @@ const DB = {
     ],
     "contact": [
         {
-            "user_id": "1",
-            "user_name": "Menna Gamal Eldien",
-            "email": "mennagamaleldien@gmail.com",
-            "phone": "01015564659",
-            "message": "Just Hi"
-        },
-        {
-            "user_id": "1",
-            "user_name": "Menna Gamal Eldien",
-            "email": "mennagamaleldien@gmail.com",
-            "phone": "01015564659",
-            "message": "Hello again no respond"
+            "user_id": "2",
+            "user_name": "Client Client",
+            "email": "client123@gmail.com",
+            "phone": "09876543210",
+            "message": "i purchased a wrong item and cancled the order when will i get the refund"
         }
     ],
     "coupon": {
@@ -360,7 +353,7 @@ const DB = {
         }
     },
     "favorite": {
-        "1": [
+        "2": [
             "5",
             "27",
             "24",
@@ -1521,19 +1514,19 @@ const DB = {
     "user_cancel": [
         {
             "bill_id": "15",
-            "user_id": "1",
+            "user_id": "2",
             "date_time": "2025-04-11 00:30:33",
-            "reason": "No Money"
+            "reason": "i purchased the wrong item"
         }
     ],
     "user_coupon": [
         {
-            "user_id": "1",
+            "user_id": "2",
             "coupon_id": "5",
             "date_used": "2025-04-10 23:52:21"
         },
         {
-            "user_id": "1",
+            "user_id": "2",
             "coupon_id": "8",
             "date_used": "2025-04-24 23:02:05"
         }
@@ -1541,9 +1534,9 @@ const DB = {
     "user_return": [
         {
             "bill_id": "12",
-            "user_id": "1",
+            "user_id": "2",
             "date_time": "2025-04-11 00:31:24",
-            "reason": "Poor"
+            "reason": "Poor quality"
         }
     ]
 }
