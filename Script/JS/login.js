@@ -1,3 +1,16 @@
+// Setting the Enter
+document.body.innerHTML += `
+<div class='R C Col' style='width: max-content;height: max-content;background: var(--Gold);position: absolute;top: 20px;left: 20px;border-radius: 10px;
+    border: 2px solid var(--Main_Color);font-weight:bold;padding:20px;gap:10px;align-items:start'>
+<div>Email: admin123@gmail.com</div>
+<div>password: Admin123#</div>
+<div>------------------------</div>
+<div>Email: client123@gmail.com</div>
+<div>password: Client123#</div>
+</div>
+`;
+// End
+
 let logbtn = document.querySelector(".logindata input[type='submit']");
 let input_parent = document.querySelectorAll("form .input");
 let email = document.querySelector("input[name='email']");
