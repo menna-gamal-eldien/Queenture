@@ -13,8 +13,8 @@ else {
 
 // Control based on page
 let LocArr = location.pathname.substring(1).split("/");
-let P_type = LocArr[0].toLowerCase();
-let P_name = LocArr[1].split(".")[0].toLowerCase();
+let P_type = LocArr[1].toLowerCase();
+let P_name = LocArr[2].split(".")[0].toLowerCase();
 let OutArr = ["main", "validate", "signup", "passforget", "passchange", "login", "about"];
 let OutOnly = ["signup", "validate", "passforget", "passchange", "login"];
 
