@@ -13,7 +13,7 @@ function change() {
             c.classList.add("active")
         }
     })
-    image.forEach(im => im.style.translate = (-900 * index) + "px")
+    image.forEach(im => im.style.translate = (-im.parentElement.clientWidth * index) + "px")
 }
 
 control.forEach((c, i) => {
