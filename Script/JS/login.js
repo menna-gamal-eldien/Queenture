@@ -16,7 +16,7 @@ document.querySelector("input[type='submit']+span").addEventListener("click", _ 
 
     let All_Emails_Dict = Get_Table("Account");
     let All_Emails = [];
-    Object.keys(All_Emails_Dict).forEach(id => All_Emails = All_Emails_Dict[id]["email"])
+    Object.keys(All_Emails_Dict).forEach(id => All_Emails.push(All_Emails_Dict[id]["email"]))
 
 
     if (!All_Emails.includes(emailforget)) {
