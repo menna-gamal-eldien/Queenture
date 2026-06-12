@@ -947,7 +947,6 @@ span.err {
 /* Phone */
 @media screen and (max-width:768px) {
     .Bigcontainer {
-        border: 2px solid red;
         width: 768px;
         grid-template: var(--headerL) 1fr var(--footerS) / 768px;
     }
