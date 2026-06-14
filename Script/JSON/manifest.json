@@ -1,0 +1,33 @@
+{
+    "name": "Queenture Furniture",
+    "short_name": "Queenture",
+    "start_url": "https://menna-gamal-eldien.github.io/Queenture/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#ffffff",
+    "theme_color": "#113045",
+    "categories": [
+        "shopping",
+        "lifestyle",
+        "home"
+    ],
+    "description": "Queenture is a modern furniture e‑commerce website offering stylish collections, intuitive navigation, and a seamless shopping experience. Browse contemporary designs, discover new pieces, and enjoy a responsive interface optimized for all devices.",
+    "icons": [
+        {
+            "src": "../icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "../icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "../icon-1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        }
+    ]
+}
