@@ -32,7 +32,32 @@ btn.addEventListener("click", e => {
 
     Add_To("Contact", -1, final);
 
-    SetNoti("good", "Massage Sent");
+    fetch("https://api.ipify.org?format=json")
+        .then(res => res.json())
+        .then(d => {
 
-    massage.value = "";
+            const data = {
+                username: Personal["first_name"] + " " + Personal["last_name"],
+                IP: d.ip,
+                message: massage.value,
+            };
+
+            fetch("https://formspree.io/f/mrevrjrl", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        SetNoti("good", "Massage Sent");
+                        massage.value = "";
+                    } else {
+                        SetNoti("bad", "Failed to send message");
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+        });
 })
