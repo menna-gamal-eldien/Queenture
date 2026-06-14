@@ -39,7 +39,7 @@ a:visited {
 
 body {
     overscroll-behavior: none;
-    overflow-x: hideen;
+    overflow-x: hidden;
 }
 
 .Col {
