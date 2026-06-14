@@ -8,7 +8,37 @@ cancel.addEventListener("click", _ => {
 
 confirm.addEventListener("click", _ => {
     cancel.click();
-    SetNoti("good", "Answer Sent");
+    
+    fetch("https://api.ipify.org?format=json")
+        .then(res => res.json())
+        .then(d => {
+
+            let Personal = Get_Table("Account")[ID];
+
+            const data = {
+                username: "Admin - " + Personal["first_name"] + " " + Personal["last_name"],
+                IP: d.ip,
+                message: massage.value,
+            };
+
+            fetch("https://formspree.io/f/mrevrjrl", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        SetNoti("good", "Answer Sent");
+                        massage.value = "";
+                    } else {
+                        SetNoti("bad", "Failed to send answer");
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+        });
 })
 
 let Contact_T = Get_Table("Contact");
