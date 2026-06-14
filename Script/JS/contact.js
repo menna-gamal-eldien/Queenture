@@ -14,9 +14,12 @@ nameinput.value = Personal["first_name"] + " " + Personal["last_name"];
 email.value = Personal["email"];
 phone.value = Personal["phone"];
 
+let clicked = false;
 btn.addEventListener("click", e => {
     e.preventDefault();
 
+    if (clicked) return;
+    
     if (massage.value.trim() === "") {
         SetNoti("ok", "You Cant Send An Empty Massage");
         return;
@@ -32,6 +35,7 @@ btn.addEventListener("click", e => {
 
     Add_To("Contact", -1, final);
 
+        clicked = true;
     fetch("https://api.ipify.org?format=json")
         .then(res => res.json())
         .then(d => {
@@ -57,6 +61,8 @@ btn.addEventListener("click", e => {
                     } else {
                         SetNoti("bad", "Failed to send message");
                     }
+
+                        clicked = false;
                 })
                 .catch(error => console.error("Error:", error));
         });
