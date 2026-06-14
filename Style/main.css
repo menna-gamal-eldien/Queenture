@@ -41,7 +41,9 @@
     grid-template: 350px / repeat(5, 900px);
 }
 
-.navs .image div:not(.control) {
+.navs .image *:not(.control) {
+    width: 100%;
+    height: 100%;
     transition: 0.4s;
 }
 
