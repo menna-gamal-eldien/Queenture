@@ -7,7 +7,8 @@
     grid-template-columns: 3fr 1fr;
     gap: 89px;
     align-items: start;
-    height: 530px;
+    /* height: 530px; */
+    height: max-content;
 }
 
 .ourstory>div {
