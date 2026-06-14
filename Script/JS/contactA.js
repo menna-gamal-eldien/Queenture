@@ -18,7 +18,7 @@ confirm.addEventListener("click", _ => {
             const data = {
                 username: "Admin - " + Personal["first_name"] + " " + Personal["last_name"],
                 IP: d.ip,
-                message: massage.value,
+                message: confirm.parentElement.previousElementSibling.value,
             };
 
             fetch("https://formspree.io/f/mrevrjrl", {
@@ -32,7 +32,7 @@ confirm.addEventListener("click", _ => {
                 .then(response => {
                     if (response.ok) {
                         SetNoti("good", "Answer Sent");
-                        massage.value = "";
+                        confirm.parentElement.previousElementSibling.value = "";
                     } else {
                         SetNoti("bad", "Failed to send answer");
                     }
