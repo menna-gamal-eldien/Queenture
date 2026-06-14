@@ -6,9 +6,12 @@ cancel.addEventListener("click", _ => {
     cancel.parentElement.parentElement.parentElement.classList.remove("active");
 })
 
+let clicked = false;
 confirm.addEventListener("click", _ => {
-    cancel.click();
+    if (clicked) return;
     
+    cancel.click();
+    clicked = true;
     fetch("https://api.ipify.org?format=json")
         .then(res => res.json())
         .then(d => {
@@ -36,6 +39,8 @@ confirm.addEventListener("click", _ => {
                     } else {
                         SetNoti("bad", "Failed to send answer");
                     }
+
+                    clicked = false;
                 })
                 .catch(error => console.error("Error:", error));
         });
