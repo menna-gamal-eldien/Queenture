@@ -1,4 +1,4 @@
-let image = document.querySelectorAll(".navs .image div:not(.control)");
+let image = document.querySelectorAll(".navs .image >*:not(.control)");
 let control = document.querySelectorAll(".navs .control span");
 let index = 0;
 setInterval(_ => {
